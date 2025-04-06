@@ -1,0 +1,122 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body {
+    font-family: 'Poppins', sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-color: #111;
+}
+.slider {
+    width: 100%;
+    position: relative;
+    overflow: hidden;
+    height: 300px;
+}
+.slide__wrapper {
+    position: absolute;
+    z-index: 10;
+}
+.slide {
+    display: flex;
+    gap: 20px;
+    margin-top: 25px;
+    animation: slide 9s linear infinite;
+}
+.slide:hover {
+    animation-play-state: paused;
+}
+.slide__content {
+    width: 500px;
+    background-color: gray;
+    padding: 20px;
+    border-radius: 50px;
+    cursor: pointer;
+}
+.slide__content p {
+    font-size: 14px;
+    margin-bottom: 10px;
+    color: white;
+    selact: none;
+}
+.ri-bookmark-fill {
+    font-size: 2rem;
+    margin-bottom: 10px;
+}
+.slider__content__footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.ri-star-fill {
+    color: gold;
+    font-size: 1.5rem;
+}
+.cird__img {
+    height: 70px;
+    width: 70px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+.user__info {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+.user__info__text h3 {
+    font-size: 14px;
+    color: white;
+    text-align: right;
+    margin-bottom: 5px;
+}
+.user__info__text h4 {
+    font-size: 12px;
+    text-align: right;
+}
+.counter {
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+.right__shadow {
+    height: 100%;
+    width: 300px;
+    background: linear-gradient(to left, #111, transparent);
+    position: absolute;
+    top: 0;
+    right: 0;
+    z-index: 20;
+}
+.left__shadow {
+    height: 100%;
+    width: 300px;
+    background: linear-gradient(to right, #111, transparent);
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 20;
+}
+
+@keyframes slide {
+    0% {
+        transform: translateX(0);
+    }
+    100% {
+        transform: translateX(-35%);
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .slide__content {
+        width: 400px;
+    }
+    .slide {
+        animation-duration: 12s;
+    }
+}
