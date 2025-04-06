@@ -12,7 +12,7 @@ body {
     background-color: #111;
 }
 .slider {
-    width: 100%;
+    width: 1200px;
     position: relative;
     overflow: hidden;
     height: 300px;
@@ -25,7 +25,6 @@ body {
     display: flex;
     gap: 20px;
     margin-top: 25px;
-    animation: slide 9s linear infinite;
 }
 .slide:hover {
     animation-play-state: paused;
@@ -109,6 +108,12 @@ body {
     }
     100% {
         transform: translateX(-35%);
+    }
+}
+@media screen and (max-width: 1200px) {
+  
+    .slider{
+        width: 100%;
     }
 }
 
